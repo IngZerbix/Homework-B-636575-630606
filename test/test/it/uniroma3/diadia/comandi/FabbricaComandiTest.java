@@ -36,7 +36,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testVaiParametro() {
-		assertEquals(this.comandoVai.getParamentro(),"nord");
+		assertEquals(this.comandoVai.getParametro(),"nord");
 	}
 	
 	@Test
@@ -46,7 +46,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testPrendiParametro() {
-		assertEquals(this.comandoPrendi.getParamentro(),"mela");
+		assertEquals(this.comandoPrendi.getParametro(),"mela");
 	}
 	
 	@Test
@@ -56,7 +56,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testPosaParametro() {
-		assertEquals(this.comandoPosa.getParamentro(),"banana");
+		assertEquals(this.comandoPosa.getParametro(),"banana");
 	}
 	
 	@Test
@@ -66,7 +66,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testAiutoParametro() {
-		assertNull(this.comandoAiuto.getParamentro());
+		assertNull(this.comandoAiuto.getParametro());
 	}
 	
 	@Test
@@ -76,7 +76,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testFineParametro() {
-		assertNull(this.comandoFine.getParamentro());
+		assertNull(this.comandoFine.getParametro());
 	}
 	
 	@Test
@@ -86,7 +86,7 @@ class FabbricaComandiTest {
 	
 	@Test
 	void testGuardaParametro() {
-		assertNull(this.comandoGuarda.getParamentro());
+		assertNull(this.comandoGuarda.getParametro());
 	}
 	
 	
