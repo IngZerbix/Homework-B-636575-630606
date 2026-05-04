@@ -16,6 +16,7 @@ public class ComandoFine implements Comando {
 	@Override
 	public void esegui(Partita partita) {
 		this.io.mostraMessaggio("Grazie di aver giocato!");
+		partita.setFinita();
 	}
 
 	@Override
@@ -27,5 +28,5 @@ public class ComandoFine implements Comando {
 	public String getNome() {
 		return this.nome;
 	}
-
+	
 }
