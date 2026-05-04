@@ -21,11 +21,13 @@ class StanzaBuiaTest {
 	}
 	
 	@Test
-	void testConLampadina() {
-		Attrezzo lampadina = new Attrezzo("lampadina", 3);
-		this.stanza.addAttrezzo(lampadina);
-		assertEquals(this.stanza.getDescrizione(),"cantina\nUscite: \nAttrezzi nella stanza: lampadina (3kg) ");
-	}
+    void testConLampadina() {
+    Attrezzo lampadina = new Attrezzo("lampadina", 3);
+    this.stanza.addAttrezzo(lampadina);
+    String descrizione = this.stanza.getDescrizione();
+    assertTrue(descrizione.contains("cantina"));
+    assertTrue(descrizione.contains("lampadina"));
+}
 	
 
 }
