@@ -39,7 +39,7 @@ public class ComandoPrendi implements Comando {
 	}
 
 	@Override
-	public String getParamentro() {
+	public String getParametro() {
 		return this.parametro;
 	}
 
