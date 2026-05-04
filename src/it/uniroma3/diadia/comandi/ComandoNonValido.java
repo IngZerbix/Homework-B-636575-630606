@@ -20,7 +20,7 @@ public class ComandoNonValido implements Comando {
 	public void setParametro(String parametro) {}
 
 	@Override
-	public String getParamentro() {
+	public String getParametro() {
 		return null;
 	}
 
