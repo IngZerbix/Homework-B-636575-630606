@@ -8,12 +8,19 @@ import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;
 
 class ComandoVaiTest {
+	
+	private ComandoVai comando;
+	private Partita partita;
 
+	@BeforeEach
+	void setUp() {
+		IO io = new IOConsole();
+		this.comando = new ComandoVai(io);
+		this.partita = new Partita();
+	}
+	
 	@Test
 	void testNoDirezione() {
-		IO io = new IOConsole();
-		ComandoVai comando = new ComandoVai(io);
-		Partita partita = new Partita();
 		Stanza stanzaIniziale = partita.getStanzaCorrente();
 		comando.setParametro(null);
 		comando.esegui(partita);
@@ -22,9 +29,6 @@ class ComandoVaiTest {
 	
 	@Test
 	void testDirezioneNord() {
-		IO io = new IOConsole();
-		ComandoVai comando = new ComandoVai(io);
-		Partita partita = new Partita();
 		Stanza stanzaNord = partita.getStanzaCorrente().getStanzaAdiacente("nord");
 		comando.setParametro("nord");
 		comando.esegui(partita);
@@ -33,9 +37,6 @@ class ComandoVaiTest {
 	
 	@Test 
 	void testNoStanzaAdiacente(){
-		IO io = new IOConsole();
-		ComandoVai comando = new ComandoVai(io);
-		Partita partita = new Partita();
 		Stanza stanzaIniziale = partita.getStanzaCorrente();
 		partita.getStanzaCorrente().impostaStanzaAdiacente("nord", null);
 		comando.setParametro("nord");
